@@ -63,15 +63,46 @@ const resume = {
   },
 
   skills: [
-    { title: "Languages & core", items: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SCSS"] },
-    { title: "Frameworks & libraries", items: ["React.js", "Next.js", "Vue.js"] },
-    { title: "State management", items: ["Redux", "Redux Toolkit", "Context API", "Pinia", "Vuex"] },
-    { title: "UI & visualisation", items: ["Material UI", "Tailwind CSS", "Bootstrap", "Semantic UI", "AG Grid", "Highcharts"] },
-    { title: "Backend & APIs", items: ["Node.js", "Express.js", "REST APIs", "WebSocket"] },
+    {
+      title: "Languages & core",
+      items: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SCSS"],
+    },
+    {
+      title: "Frameworks & libraries",
+      items: ["React.js", "Next.js", "Vue.js"],
+    },
+    {
+      title: "State management",
+      items: ["Redux", "Redux Toolkit", "Context API", "Pinia", "Vuex"],
+    },
+    {
+      title: "UI & visualisation",
+      items: [
+        "Material UI",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Semantic UI",
+        "AG Grid",
+        "Highcharts",
+      ],
+    },
+    {
+      title: "Backend & APIs",
+      items: ["Node.js", "Express.js", "REST APIs", "WebSocket"],
+    },
     { title: "Database", items: ["SQL"] },
-    { title: "Tools & platforms", items: ["Git", "GitHub", "Jira", "ClickUp", "Postman"] },
-    { title: "AI-assisted development", items: ["AI agent workflows", "Claude", "Cursor"] },
-    { title: "Architecture", items: ["Modular UI architecture", "Data flow architecture", "eCommerce"] },
+    {
+      title: "Tools & platforms",
+      items: ["Git", "GitHub", "Jira", "ClickUp", "Postman"],
+    },
+    {
+      title: "AI-assisted development",
+      items: ["AI agent workflows", "Claude", "Cursor"],
+    },
+    {
+      title: "Architecture",
+      items: ["Modular UI architecture", "Data flow architecture", "eCommerce"],
+    },
   ],
 
   experience: [
@@ -89,7 +120,16 @@ const resume = {
         "Implemented centralised Redux for high-frequency interactions to strengthen state integrity and predictable data flow.",
         "Applied in-memory storage to cut unnecessary API calls and improve page load performance.",
       ],
-      tech: ["React.js", "Redux", "JavaScript (ES6+)", "Highcharts", "HTML5", "SCSS", "REST APIs", "Git"],
+      tech: [
+        "React.js",
+        "Redux",
+        "JavaScript (ES6+)",
+        "Highcharts",
+        "HTML5",
+        "SCSS",
+        "REST APIs",
+        "Git",
+      ],
     },
     {
       date: "Sep 2021 — Jan 2025",
@@ -105,7 +145,17 @@ const resume = {
         "Participated in Agile processes: sprint planning, code reviews and feature delivery cycles.",
         "Contributed to frontend optimisation through reusable component patterns, refactoring and UI performance work.",
       ],
-      tech: ["React.js", "Redux", "JavaScript (ES6+)", "HTML5", "SCSS", "Jest", "React Testing Library", "REST APIs", "Git"],
+      tech: [
+        "React.js",
+        "Redux",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "SCSS",
+        "Jest",
+        "React Testing Library",
+        "REST APIs",
+        "Git",
+      ],
     },
     {
       date: "Aug 2020 — Jul 2021",
@@ -121,7 +171,15 @@ const resume = {
         "Used Git for version control and clean collaborative development workflows.",
         "Improved application responsiveness, browser compatibility and frontend maintainability.",
       ],
-      tech: ["React.js", "JavaScript", "HTML5", "CSS3", "REST APIs", "Git", "Agile"],
+      tech: [
+        "React.js",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "REST APIs",
+        "Git",
+        "Agile",
+      ],
     },
   ],
 
@@ -159,10 +217,22 @@ const resume = {
   ],
 
   achievements: [
-    { metric: "250KB / 1.5s", text: "Cut JavaScript bundle size by 250KB and improved load time by 1.5 seconds through lazy loading and dependency audits." },
-    { metric: "100+", text: "Production issues resolved at IndiaCharts, improving overall system stability and user experience." },
-    { metric: "1 month", text: "Promoted from frontend development intern to full-time Product Engineer at Amphisoft Technologies, based on performance and technical contribution." },
-    { metric: "Re-architecture", text: "Led a frontend re-architecture and defined a scalable component and folder structure that supported growth across feature modules." },
+    {
+      metric: "250KB / 1.5s",
+      text: "Cut JavaScript bundle size by 250KB and improved load time by 1.5 seconds through lazy loading and dependency audits.",
+    },
+    {
+      metric: "100+",
+      text: "Production issues resolved at IndiaCharts, improving overall system stability and user experience.",
+    },
+    {
+      metric: "1 month",
+      text: "Promoted from frontend development intern to full-time Product Engineer at Amphisoft Technologies, based on performance and technical contribution.",
+    },
+    {
+      metric: "Re-architecture",
+      text: "Led a frontend re-architecture and defined a scalable component and folder structure that supported growth across feature modules.",
+    },
   ],
 
   // Nothing was listed on the resume. Add objects like
@@ -180,30 +250,47 @@ const NAV_ITEMS = [
   { id: "contact", label: "Contact", cta: true },
 ];
 
+console.log("test");
+
 /* ============================================================
    2. SMALL HELPERS
    ============================================================ */
 
 // Shows a clear placeholder when a URL hasn't been filled in yet
 function linkOrPlaceholder(url, placeholder) {
-  return url ? { href: url, label: url, missing: false } : { href: "#", label: placeholder, missing: true };
+  return url
+    ? { href: url, label: url, missing: false }
+    : { href: "#", label: placeholder, missing: true };
 }
 
 // Minimal inline SVG icons, so the site works with no icon library
 const Icon = ({ name, className = "" }) => {
   const paths = {
     mail: "M2 5.5h20v13H2zM2 6l10 7 10-7",
-    phone: "M6.6 2.5 9 3.2l1 3.4-1.8 1.5a13 13 0 0 0 6.7 6.7l1.5-1.8 3.4 1 .7 2.4a2 2 0 0 1-2 2.6C10.6 19.5 4.5 13.4 4 5.5a2 2 0 0 1 2.6-3Z",
+    phone:
+      "M6.6 2.5 9 3.2l1 3.4-1.8 1.5a13 13 0 0 0 6.7 6.7l1.5-1.8 3.4 1 .7 2.4a2 2 0 0 1-2 2.6C10.6 19.5 4.5 13.4 4 5.5a2 2 0 0 1 2.6-3Z",
     pin: "M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
-    github: "M9 19c-4.3 1.4-4.3-2.2-6-2.6m12 5v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 6.1-1.5 6.1-6.6A5.1 5.1 0 0 0 18.8 5a4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.6 12.6 0 0 0-6.6 0C5.8 1.1 4.7 1.4 4.7 1.4A4.8 4.8 0 0 0 4.6 5a5.1 5.1 0 0 0-1.4 3.8c0 5.1 3.1 6.3 6.1 6.6a3.1 3.1 0 0 0-.9 2.4V21",
-    linkedin: "M6 9v12M6 4.5v.01M10.5 21V9m0 4.5c0-2 1.4-3.5 3.4-3.5s3.6 1.5 3.6 4.2V21",
+    github:
+      "M9 19c-4.3 1.4-4.3-2.2-6-2.6m12 5v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 6.1-1.5 6.1-6.6A5.1 5.1 0 0 0 18.8 5a4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.6 12.6 0 0 0-6.6 0C5.8 1.1 4.7 1.4 4.7 1.4A4.8 4.8 0 0 0 4.6 5a5.1 5.1 0 0 0-1.4 3.8c0 5.1 3.1 6.3 6.1 6.6a3.1 3.1 0 0 0-.9 2.4V21",
+    linkedin:
+      "M6 9v12M6 4.5v.01M10.5 21V9m0 4.5c0-2 1.4-3.5 3.4-3.5s3.6 1.5 3.6 4.2V21",
     arrowUp: "M12 19V5M5 12l7-7 7 7",
-    external: "M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5",
+    external:
+      "M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5",
     info: "M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 11v6M12 7.5v.01",
   };
   return (
-    <svg className={"icon " + className} viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <svg
+      className={"icon " + className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
       <path d={paths[name]} />
     </svg>
   );
@@ -228,7 +315,7 @@ const Reveal = ({ children, as: Tag = "div", className = "", delay = 0 }) => {
           observer.unobserve(node);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
     );
 
     observer.observe(node);
@@ -236,7 +323,10 @@ const Reveal = ({ children, as: Tag = "div", className = "", delay = 0 }) => {
   }, [delay]);
 
   return (
-    <Tag ref={ref} className={"reveal " + (visible ? "is-visible " : "") + className}>
+    <Tag
+      ref={ref}
+      className={"reveal " + (visible ? "is-visible " : "") + className}
+    >
       {children}
     </Tag>
   );
@@ -293,12 +383,20 @@ const Navbar = ({ activeId }) => {
   return (
     <header className={"nav" + (scrolled ? " is-scrolled" : "")}>
       <div className="container nav__inner">
-        <a href="#home" className="nav__brand" aria-label={resume.name + " — back to top"}>
+        <a
+          href="#home"
+          className="nav__brand"
+          aria-label={resume.name + " — back to top"}
+        >
           <span className="nav__monogram">KP</span>
           <span className="nav__brandtext">{resume.name}</span>
         </a>
 
-        <nav className={"nav__menu" + (open ? " is-open" : "")} id="navMenu" aria-label="Main">
+        <nav
+          className={"nav__menu" + (open ? " is-open" : "")}
+          id="navMenu"
+          aria-label="Main"
+        >
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
@@ -334,7 +432,10 @@ const Navbar = ({ activeId }) => {
    4. HERO — the market line draws itself once on load
    ============================================================ */
 const Hero = () => {
-  const linkedin = linkOrPlaceholder(resume.links.linkedin, "[Add LinkedIn URL]");
+  const linkedin = linkOrPlaceholder(
+    resume.links.linkedin,
+    "[Add LinkedIn URL]",
+  );
   const github = linkOrPlaceholder(resume.links.github, "[Add GitHub URL]");
 
   const line =
@@ -342,7 +443,12 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <svg className="hero__chart" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true">
+      <svg
+        className="hero__chart"
+        viewBox="0 0 1200 320"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
         <defs>
           <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#4CC9F0" />
@@ -353,33 +459,62 @@ const Hero = () => {
             <stop offset="100%" stopColor="#8B7CFF" stopOpacity="0" />
           </linearGradient>
         </defs>
-        <path className="hero__area" d={line + " L1200,320 L0,320 Z"} fill="url(#fillGrad)" />
-        <path className="hero__line" d={line} fill="none" stroke="url(#lineGrad)" strokeWidth="2.5" strokeLinejoin="round" />
+        <path
+          className="hero__area"
+          d={line + " L1200,320 L0,320 Z"}
+          fill="url(#fillGrad)"
+        />
+        <path
+          className="hero__line"
+          d={line}
+          fill="none"
+          stroke="url(#lineGrad)"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
       </svg>
 
       <div className="container hero__inner">
-        <p className="eyebrow hero__eyebrow">{resume.role} · {resume.years}</p>
+        <p className="eyebrow hero__eyebrow">
+          {resume.role} · {resume.years}
+        </p>
         <h1 className="hero__name">{resume.name}</h1>
 
         <p className="hero__role">
-          I build <span className="hl">{resume.headline}</span>{resume.headlineRest}
+          I build <span className="hl">{resume.headline}</span>
+          {resume.headlineRest}
         </p>
 
         <p className="hero__intro">{resume.intro}</p>
 
         <div className="hero__actions">
-          <a className="btn btn--primary" href="#projects">View my work</a>
-          <a className="btn btn--ghost" href="#contact">Contact me</a>
+          <a className="btn btn--primary" href="#projects">
+            View my work
+          </a>
+          <a className="btn btn--ghost" href="#contact">
+            Contact me
+          </a>
         </div>
 
         <ul className="hero__links">
           <li>
-            <a className="iconlink" target="_blank" href={linkedin.href} aria-label="LinkedIn profile">
-              <Icon name="linkedin" /> {linkedin.missing ? linkedin.label : "LinkedIn"}
+            <a
+              className="iconlink"
+              target="_blank"
+              href={linkedin.href}
+              aria-label="LinkedIn profile"
+            >
+              <Icon name="linkedin" />{" "}
+              {linkedin.missing ? linkedin.label : "LinkedIn"}
             </a>
           </li>
           <li>
-            <a className="iconlink" target="_blank" href={github.href} aria-label="GitHub profile">
+            <a
+              className="iconlink"
+              target="_blank"
+              href={github.href}
+              aria-label="GitHub profile"
+            >
               <Icon name="github" /> {github.missing ? github.label : "GitHub"}
             </a>
           </li>
@@ -410,16 +545,26 @@ const Hero = () => {
    5. CONTENT SECTIONS
    ============================================================ */
 const About = () => (
-  <Section id="about" eyebrow="01 — About" title="A frontend engineer who cares how the app behaves under load">
+  <Section
+    id="about"
+    eyebrow="01 — About"
+    title="A frontend engineer who cares how the app behaves under load"
+  >
     <div className="about">
       <Reveal className="about__text">
         {resume.about.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
         <ul className="about__facts">
-          <li><Icon name="pin" /> {resume.contact.location}</li>
-          <li><Icon name="phone" /> {resume.contact.phone}</li>
-          <li><Icon name="mail" /> {resume.contact.email}</li>
+          <li>
+            <Icon name="pin" /> {resume.contact.location}
+          </li>
+          <li>
+            <Icon name="phone" /> {resume.contact.phone}
+          </li>
+          <li>
+            <Icon name="mail" /> {resume.contact.email}
+          </li>
         </ul>
       </Reveal>
 
@@ -430,7 +575,9 @@ const About = () => (
           <span className="photo-frame__initials">KP</span>
           <span className="photo-frame__hint">[Add Profile Photo]</span>
         </div>
-        <figcaption className="photo-caption">React · TypeScript · Real-time UI</figcaption>
+        <figcaption className="photo-caption">
+          React · TypeScript · Real-time UI
+        </figcaption>
       </Reveal>
     </div>
   </Section>
@@ -443,7 +590,9 @@ const Education = () => (
       <div className="edu__body">
         <h3 className="edu__degree">{resume.education.degree}</h3>
         <p className="edu__school">{resume.education.school}</p>
-        <p className="edu__place"><Icon name="pin" /> {resume.education.place}</p>
+        <p className="edu__place">
+          <Icon name="pin" /> {resume.education.place}
+        </p>
       </div>
     </Reveal>
   </Section>
@@ -453,9 +602,16 @@ const Skills = () => (
   <Section id="skills" eyebrow="03 — Technical skills" title="The toolkit">
     <div className="skills">
       {resume.skills.map((group, i) => (
-        <Reveal key={group.title} as="article" className="card skill" delay={(i % 3) * 80}>
+        <Reveal
+          key={group.title}
+          as="article"
+          className="card skill"
+          delay={(i % 3) * 80}
+        >
           <h3 className="skill__title">
-            <span className="skill__index">{String(i + 1).padStart(2, "0")}</span>
+            <span className="skill__index">
+              {String(i + 1).padStart(2, "0")}
+            </span>
             {group.title}
           </h3>
           <Tags items={group.items} />
@@ -466,7 +622,11 @@ const Skills = () => (
 );
 
 const Experience = () => (
-  <Section id="experience" eyebrow="04 — Experience" title="Five years, three product teams">
+  <Section
+    id="experience"
+    eyebrow="04 — Experience"
+    title="Five years, three product teams"
+  >
     <ol className="timeline">
       {resume.experience.map((job) => (
         <Reveal key={job.company} as="li" className="timeline__item">
@@ -490,16 +650,27 @@ const Experience = () => (
 );
 
 const Projects = () => (
-  <Section id="projects" eyebrow="05 — Featured projects" title="Products I helped build">
+  <Section
+    id="projects"
+    eyebrow="05 — Featured projects"
+    title="Products I helped build"
+  >
     <div className="projects">
       {resume.projects.map((project, i) => {
         const github = linkOrPlaceholder(project.github, "[Add GitHub URL]");
         const demo = linkOrPlaceholder(project.demo, "[Add live demo URL]");
 
         return (
-          <Reveal key={project.title} as="article" className="card project" delay={i * 100}>
+          <Reveal
+            key={project.title}
+            as="article"
+            className="card project"
+            delay={i * 100}
+          >
             <header className="project__head">
-              <span className="project__num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+              <span className="project__num" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div>
                 <h3 className="project__title">{project.title}</h3>
                 <p className="project__org">{project.org}</p>
@@ -517,7 +688,8 @@ const Projects = () => (
                 <Icon name="github" /> {github.missing ? github.label : "Source"}
               </a> */}
               <a className="iconlink" href={demo.href} target="_blank">
-                <Icon name="external" /> {demo.missing ? demo.label : "Live demo"}
+                <Icon name="external" />{" "}
+                {demo.missing ? demo.label : "Live demo"}
               </a>
             </div>
           </Reveal>
@@ -528,10 +700,19 @@ const Projects = () => (
 );
 
 const Achievements = () => (
-  <Section id="achievements" eyebrow="06 — Achievements & certifications" title="Measured outcomes">
+  <Section
+    id="achievements"
+    eyebrow="06 — Achievements & certifications"
+    title="Measured outcomes"
+  >
     <div className="wins">
       {resume.achievements.map((win, i) => (
-        <Reveal key={win.metric} as="article" className="card win" delay={(i % 2) * 80}>
+        <Reveal
+          key={win.metric}
+          as="article"
+          className="card win"
+          delay={(i % 2) * 80}
+        >
           <span className="win__metric">{win.metric}</span>
           <p className="win__text">{win.text}</p>
         </Reveal>
@@ -542,15 +723,17 @@ const Achievements = () => (
       <h3 className="certs__title">Certifications</h3>
       {resume.certifications.length === 0 ? (
         <p className="certs__note">
-          [Add certification name — issuing organisation — year]. Nothing was listed on the resume,
-          so this is a placeholder. Add entries to <code>resume.certifications</code>, or delete the
-          card if you'd rather not show it.
+          [Add certification name — issuing organisation — year]. Nothing was
+          listed on the resume, so this is a placeholder. Add entries to{" "}
+          <code>resume.certifications</code>, or delete the card if you'd rather
+          not show it.
         </p>
       ) : (
         <ul className="certs__list">
           {resume.certifications.map((cert) => (
             <li key={cert.name}>
-              <strong>{cert.name}</strong> — {cert.issuer} <span className="dot">·</span> {cert.year}
+              <strong>{cert.name}</strong> — {cert.issuer}{" "}
+              <span className="dot">·</span> {cert.year}
             </li>
           ))}
         </ul>
@@ -563,23 +746,55 @@ const Achievements = () => (
    6. CONTACT FORM — validation lives in React state
    ============================================================ */
 const FIELDS = [
-  { name: "name", label: "Name", placeholder: "Your name", type: "text",
-    test: (v) => v.trim().length >= 2, message: "Enter your name (at least 2 characters)." },
-  { name: "email", label: "Email", placeholder: "you@company.com", type: "email",
-    test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), message: "Enter a valid email address, like you@company.com." },
-  { name: "subject", label: "Subject", placeholder: "What's this about?", type: "text",
-    test: (v) => v.trim().length >= 3, message: "Add a short subject." },
-  { name: "message", label: "Message", placeholder: "A few lines about the role or project", type: "textarea",
-    test: (v) => v.trim().length >= 10, message: "Write at least 10 characters so I know what you need." },
+  {
+    name: "name",
+    label: "Name",
+    placeholder: "Your name",
+    type: "text",
+    test: (v) => v.trim().length >= 2,
+    message: "Enter your name (at least 2 characters).",
+  },
+  {
+    name: "email",
+    label: "Email",
+    placeholder: "you@company.com",
+    type: "email",
+    test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    message: "Enter a valid email address, like you@company.com.",
+  },
+  {
+    name: "subject",
+    label: "Subject",
+    placeholder: "What's this about?",
+    type: "text",
+    test: (v) => v.trim().length >= 3,
+    message: "Add a short subject.",
+  },
+  {
+    name: "message",
+    label: "Message",
+    placeholder: "A few lines about the role or project",
+    type: "textarea",
+    test: (v) => v.trim().length >= 10,
+    message: "Write at least 10 characters so I know what you need.",
+  },
 ];
 
 const Contact = () => {
-  const [values, setValues] = useState({ name: "", email: "", subject: "", message: "" });
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
 
-  const linkedin = linkOrPlaceholder(resume.links.linkedin, "[Add LinkedIn URL]");
+  const linkedin = linkOrPlaceholder(
+    resume.links.linkedin,
+    "[Add LinkedIn URL]",
+  );
   const github = linkOrPlaceholder(resume.links.github, "[Add GitHub URL]");
 
   const handleChange = (name, value) => {
@@ -615,7 +830,8 @@ const Contact = () => {
     if (!FORM_ENDPOINT) {
       setStatus(
         "Validated. Sending is not connected yet — add a form service URL to FORM_ENDPOINT, or email " +
-          resume.contact.email + " directly."
+          resume.contact.email +
+          " directly.",
       );
       return;
     }
@@ -625,7 +841,10 @@ const Contact = () => {
       setStatus("Sending…");
       const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(values),
       });
 
@@ -633,7 +852,9 @@ const Contact = () => {
         setValues({ name: "", email: "", subject: "", message: "" });
         setStatus("Message sent. I'll reply within a day or two.");
       } else {
-        setStatus("That didn't send. Try again, or email " + resume.contact.email + ".");
+        setStatus(
+          "That didn't send. Try again, or email " + resume.contact.email + ".",
+        );
       }
     } catch (error) {
       setStatus("Network problem — check your connection and try again.");
@@ -643,44 +864,61 @@ const Contact = () => {
   };
 
   return (
-    <Section id="contact" eyebrow="07 — Contact" title="Let's talk about your frontend">
+    <Section
+      id="contact"
+      eyebrow="07 — Contact"
+      title="Let's talk about your frontend"
+    >
       <div className="contact">
         <Reveal className="contact__info">
           <p className="contact__lead">
-            Open to frontend and full-stack frontend roles. The fastest way to reach me is email or phone.
+            Open to frontend and full-stack frontend roles. The fastest way to
+            reach me is email or phone.
           </p>
 
           <ul className="contact__list">
             <li>
-              <span className="contact__icon"><Icon name="mail" /></span>
+              <span className="contact__icon">
+                <Icon name="mail" />
+              </span>
               <span>
                 <span className="contact__label">Email</span>
-                <a href={"mailto:" + resume.contact.email}>{resume.contact.email}</a>
+                <a href={"mailto:" + resume.contact.email}>
+                  {resume.contact.email}
+                </a>
               </span>
             </li>
             <li>
-              <span className="contact__icon"><Icon name="phone" /></span>
+              <span className="contact__icon">
+                <Icon name="phone" />
+              </span>
               <span>
                 <span className="contact__label">Phone</span>
                 <a href={resume.contact.phoneHref}>{resume.contact.phone}</a>
               </span>
             </li>
             <li>
-              <span className="contact__icon"><Icon name="pin" /></span>
+              <span className="contact__icon">
+                <Icon name="pin" />
+              </span>
               <span>
                 <span className="contact__label">Location</span>
                 {resume.contact.location}
               </span>
             </li>
             <li>
-              <span className="contact__icon"><Icon name="linkedin" /></span>
+              <span className="contact__icon">
+                <Icon name="linkedin" />
+              </span>
               <span>
                 <span className="contact__label">LinkedIn</span>
                 <a href={linkedin.href}>{linkedin.label}</a>
               </span>
             </li>
             <li>
-              <span className="contact__icon"><Icon name="github" /></span>
+              <span className="contact__icon">
+                <Icon name="github" />
+              </span>
               <span>
                 <span className="contact__label">GitHub</span>
                 <a href={github.href}>{github.label}</a>
@@ -716,20 +954,30 @@ const Contact = () => {
                     onChange={(e) => handleChange(field.name, e.target.value)}
                   />
                 )}
-                <p className="field__error" role="alert">{errors[field.name] || ""}</p>
+                <p className="field__error" role="alert">
+                  {errors[field.name] || ""}
+                </p>
               </div>
             ))}
 
-            <button type="button" className="btn btn--primary btn--full" onClick={handleSubmit} disabled={sending}>
+            <button
+              type="button"
+              className="btn btn--primary btn--full"
+              onClick={handleSubmit}
+              disabled={sending}
+            >
               {sending ? "Sending…" : "Send message"}
             </button>
 
-            <p className="form-status" role="status">{status}</p>
+            <p className="form-status" role="status">
+              {status}
+            </p>
 
             <p className="form-note">
-              <Icon name="info" /> This form validates in the browser only. To actually receive
-              emails, connect it to a free service such as Formspree, Web3Forms or Netlify Forms and
-              set <code>FORM_ENDPOINT</code> at the top of this file.
+              <Icon name="info" /> This form validates in the browser only. To
+              actually receive emails, connect it to a free service such as
+              Formspree, Web3Forms or Netlify Forms and set{" "}
+              <code>FORM_ENDPOINT</code> at the top of this file.
             </p>
           </div>
         </Reveal>
@@ -742,18 +990,39 @@ const Contact = () => {
    7. FOOTER + BACK TO TOP
    ============================================================ */
 const Footer = () => {
-  const linkedin = linkOrPlaceholder(resume.links.linkedin, "[Add LinkedIn URL]");
+  const linkedin = linkOrPlaceholder(
+    resume.links.linkedin,
+    "[Add LinkedIn URL]",
+  );
   const github = linkOrPlaceholder(resume.links.github, "[Add GitHub URL]");
 
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <p className="footer__name">{resume.name} <span className="dot">·</span> {resume.role}</p>
+        <p className="footer__name">
+          {resume.name} <span className="dot">·</span> {resume.role}
+        </p>
         <ul className="footer__links">
-          <li><a href={linkedin.href} aria-label="LinkedIn"><Icon name="linkedin" /></a></li>
-          <li><a href={github.href} aria-label="GitHub"><Icon name="github" /></a></li>
-          <li><a href={"mailto:" + resume.contact.email} aria-label="Email"><Icon name="mail" /></a></li>
-          <li><a href={resume.contact.phoneHref} aria-label="Phone"><Icon name="phone" /></a></li>
+          <li>
+            <a href={linkedin.href} aria-label="LinkedIn">
+              <Icon name="linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href={github.href} aria-label="GitHub">
+              <Icon name="github" />
+            </a>
+          </li>
+          <li>
+            <a href={"mailto:" + resume.contact.email} aria-label="Email">
+              <Icon name="mail" />
+            </a>
+          </li>
+          <li>
+            <a href={resume.contact.phoneHref} aria-label="Phone">
+              <Icon name="phone" />
+            </a>
+          </li>
         </ul>
         <p className="footer__copy">
           © {new Date().getFullYear()} {resume.name}. Built with React.
@@ -768,7 +1037,9 @@ const BackToTop = ({ visible }) => (
     className={"to-top" + (visible ? " is-visible" : "")}
     aria-label="Back to top"
     onClick={() => {
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const reduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
       window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
     }}
   >
@@ -805,7 +1076,7 @@ export default function App() {
           if (entry.isIntersecting) setActiveId(entry.target.id);
         });
       },
-      { rootMargin: "-45% 0px -50% 0px" }
+      { rootMargin: "-45% 0px -50% 0px" },
     );
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
@@ -813,7 +1084,8 @@ export default function App() {
 
   // Page title and description, set once on mount
   useEffect(() => {
-    document.title = resume.name + " — " + resume.role + " | React.js, Next.js, TypeScript";
+    document.title =
+      resume.name + " — " + resume.role + " | React.js, Next.js, TypeScript";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -827,8 +1099,14 @@ export default function App() {
     <div className="page">
       <style>{styles}</style>
 
-      <a className="skip-link" href="#home">Skip to content</a>
-      <div className="scroll-progress" style={{ width: progress + "%" }} aria-hidden="true" />
+      <a className="skip-link" href="#home">
+        Skip to content
+      </a>
+      <div
+        className="scroll-progress"
+        style={{ width: progress + "%" }}
+        aria-hidden="true"
+      />
 
       <Navbar activeId={activeId} />
 
