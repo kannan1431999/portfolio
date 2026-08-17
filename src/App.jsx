@@ -14,6 +14,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const FORM_ENDPOINT = "https://formspree.io/f/moeakwva"; // e.g. "https://formspree.io/f/yourid"
 
@@ -1121,6 +1122,7 @@ export default function App() {
 
       <Footer />
       <BackToTop visible={showTop} />
+      <SpeedInsights />
     </div>
   );
 }
