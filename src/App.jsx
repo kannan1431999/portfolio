@@ -14,6 +14,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const FORM_ENDPOINT = "https://formspree.io/f/moeakwva"; // e.g. "https://formspree.io/f/yourid"
 
@@ -1095,6 +1096,7 @@ export default function App() {
 
   return (
     <div className="page">
+      <SpeedInsights />
       <style>{styles}</style>
 
       <a className="skip-link" href="#home">
