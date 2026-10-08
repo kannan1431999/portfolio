@@ -172,7 +172,7 @@ const resume = {
     {
       date: "Aug 2020 — Jul 2021",
       role: "Product Engineer",
-      badge: "Promoted from internship within 1 month",
+      badge: "Promoted from internship within 2 month",
       company: "Amphisoft Technologies Pvt Ltd",
       location: "Coimbatore",
       points: [
@@ -660,7 +660,7 @@ const Experience = () => (
   <Section
     id="experience"
     eyebrow="04 — Experience"
-    title="Five years, three product teams"
+    title="Six years, three product teams"
   >
     <ol className="timeline">
       {resume.experience.map((job) => (
