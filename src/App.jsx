@@ -15,6 +15,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import kannanResume from "/KannanP_Resume.pdf";
 
 const FORM_ENDPOINT = "https://formspree.io/f/moeakwva"; // e.g. "https://formspree.io/f/yourid"
 
@@ -23,37 +24,41 @@ const FORM_ENDPOINT = "https://formspree.io/f/moeakwva"; // e.g. "https://formsp
    ============================================================ */
 const resume = {
   name: "Kannan P",
-  role: "Frontend Software Engineer",
-  years: "5+ years",
-  headline: "real-time dashboards",
-  headlineRest: ", trading platforms and analytics systems in React.",
+  role: "Software Engineer",
+  years: "Nearly 6 years",
+  headline: "real-time products",
+  headlineRest:
+    " — market analytics, trading platforms and healthcare consultation tools.",
   intro:
-    "Five years of shipping scalable, high-performance web applications with React.js, Next.js, TypeScript and modern frontend architecture — with a focus on performance optimisation, predictable state management and reusable component systems that teams can keep building on.",
+    "Full-stack developer with nearly 6 years of experience building React and TypeScript frontends against Node.js and Express.js APIs. Experienced in real-time products, WebSocket data flow, authentication and role-based access, Redux state management, frontend performance optimisation, bundle reduction and caching.",
 
   contact: {
     email: "kannan143199@gmail.com",
-    phone: "+91 97152 98296",
+    phone: "+91 9715298296",
     phoneHref: "tel:+919715298296",
     location: "Tiruchengode, Namakkal, Tamil Nadu",
   },
 
-  // Neither URL was on the resume — paste them here and they go live everywhere
   links: {
-    linkedin: "https://www.linkedin.com/in/kannan-p-970a771a4/",
+    linkedin: "www.linkedin.com/in/kannan-p-frontend",
     github: "https://github.com/kannan1431999",
   },
 
   stats: [
     { value: "100+", label: "Production issues resolved" },
-    { value: "250", unit: "KB", label: "JavaScript bundle removed" },
-    { value: "1.5", unit: "s", label: "Faster load time" },
-    { value: "3", label: "Product companies" },
+    { value: "250", unit: "KB", label: "JavaScript bundle reduction" },
+    { value: "1.5", unit: "s", label: "First-load improvement" },
+    {
+      value: "2",
+      unit: "month",
+      label: "Intern-to-Product Engineer promotion",
+    },
   ],
 
   about: [
-    "I'm a Frontend Software Engineer with 5+ years of experience building scalable, high-performance web applications using React.js, TypeScript, JavaScript, Next.js and modern frontend technologies. Most of my work has been on products where the data never stops moving — trading platforms, real-time dashboards and analytics systems.",
-    "My strengths sit in frontend performance optimisation, state management, responsive UI development, REST APIs, WebSocket integration and scalable application design. I like turning tangled screens into reusable component architectures that the rest of the team can move quickly on.",
-    "I've worked alongside backend engineers, QA and product managers to deliver enterprise-grade products with better usability, maintainability and performance.",
+    "I'm a Full-stack Software Engineer with nearly 6 years of experience building scalable web applications using React.js, TypeScript, JavaScript, Next.js, Node.js and Express.js. Most of my work has been on real-time products — including a market analytics and trading platform and a healthcare consultation platform.",
+    "My strengths include frontend architecture, performance optimisation, Redux state management, responsive UI development, REST API integration, WebSocket data flow, authentication and role-based access control. I also have hands-on experience building Node.js and Express.js APIs and shaping MongoDB data models around application requirements.",
+    "I enjoy owning features end to end — from API and data flow through to frontend architecture and production delivery — while working closely with backend engineers, QA and product teams.",
   ],
 
   education: {
@@ -77,7 +82,7 @@ const resume = {
       items: ["Redux", "Redux Toolkit", "Context API", "Pinia", "Vuex"],
     },
     {
-      title: "UI & visualisation",
+      title: "UI & visualization",
       items: [
         "Material UI",
         "Tailwind CSS",
@@ -91,7 +96,10 @@ const resume = {
       title: "Backend & APIs",
       items: ["Node.js", "Express.js", "REST APIs", "WebSocket"],
     },
-    { title: "Database", items: ["SQL"] },
+    {
+      title: "Database",
+      items: ["SQL", "MongoDB"],
+    },
     {
       title: "Tools & platforms",
       items: ["Git", "GitHub", "Jira", "ClickUp", "Postman"],
@@ -108,69 +116,71 @@ const resume = {
 
   experience: [
     {
-      date: "Jan 2025 — Jun 2026",
-      role: "Frontend Developer",
+      date: "Jan 2025 — Jul 2026",
+      role: "Software Engineer",
       company: "IndiaCharts Share Trading Pvt Ltd",
       location: "Bengaluru",
       points: [
-        "Resolved 100+ production issues, improving overall system stability and user experience.",
-        "Re-architected the frontend and rebuilt core modules using modern React.js patterns to improve extensibility.",
-        "Defined a scalable component and folder structure that supported growth across feature modules.",
-        "Presented real-time dashboards and data views to support trading decisions with responsive, accessible UI.",
-        "Improved bundle architecture with lazy loading and dependency audits — 250KB less JavaScript and 1.5s faster load time.",
-        "Implemented centralised Redux for high-frequency interactions to strengthen state integrity and predictable data flow.",
-        "Applied in-memory storage to cut unnecessary API calls and improve page load performance.",
+        "Re-architected the frontend and rebuilt core modules around modern React patterns to make the application easier to extend.",
+        "Defined a scalable component and folder structure that supported continued development across feature modules.",
+        "Built real-time dashboards and data views used by traders, with responsive and accessible UI.",
+        "Improved frontend performance through lazy loading and dependency audits, reducing the JavaScript bundle by roughly 250KB and improving first load by about 1.5 seconds.",
+        "Implemented in-memory caching to prevent redundant API calls and improve application performance.",
+        "Centralised high-frequency application state using Redux so shared data remained consistent across the application.",
+        "Resolved 100+ production issues, including long-standing issues requiring root-cause investigation.",
+        "Worked with backend and product stakeholders to sequence frontend modernisation alongside existing delivery commitments.",
+        "Mentored interns on React patterns and reviewed their work to help them independently resolve issues.",
       ],
       tech: [
         "React.js",
+        "Next.js",
         "Redux",
         "JavaScript (ES6+)",
         "Highcharts",
-        "HTML5",
         "SCSS",
         "REST APIs",
         "Git",
       ],
     },
+
     {
       date: "Sep 2021 — Jan 2025",
       role: "Software Engineer",
       company: "Techjays",
       location: "Coimbatore",
       points: [
-        "Developed scalable, responsive frontend applications for EdTech platforms using React.js, Redux, JavaScript and TypeScript.",
-        "Built reusable UI components and a modular frontend architecture to improve maintainability and development speed.",
-        "Implemented complex state management with Redux for predictable data flow and better application performance.",
-        "Integrated REST APIs and worked with backend teams to deliver seamless experiences across multiple modules.",
-        "Worked closely with QA, product managers and cross-functional teams to fix bugs, resolve technical debt and improve stability.",
-        "Participated in Agile processes: sprint planning, code reviews and feature delivery cycles.",
-        "Contributed to frontend optimisation through reusable component patterns, refactoring and UI performance work.",
+        "Built and maintained React frontends across multiple platform modules, including user-facing flows and admin reporting.",
+        "Built REST APIs using Node.js and Express.js and shaped MongoDB documents around application data requirements.",
+        "Designed a modular frontend structure and reusable component library so new features could be assembled from existing components.",
+        "Handled complex application state using Redux while keeping simpler state local where appropriate.",
+        "Worked closely with QA and product teams through sprint planning, code reviews and release cycles.",
+        "Contributed to technical debt reduction and frontend maintainability alongside ongoing feature development.",
       ],
       tech: [
         "React.js",
+        "Next.js",
         "Redux",
-        "JavaScript (ES6+)",
-        "HTML5",
         "SCSS",
-        "Jest",
-        "React Testing Library",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
         "REST APIs",
         "Git",
       ],
     },
+
     {
       date: "Aug 2020 — Jul 2021",
       role: "Product Engineer",
-      badge: "Started as intern",
+      badge: "Promoted from internship within 1 month",
       company: "Amphisoft Technologies Pvt Ltd",
       location: "Coimbatore",
       points: [
-        "Joined as a frontend development intern and moved into a full-time Product Engineer role within one month, based on performance and technical contribution.",
-        "Developed responsive, user-friendly web interfaces using HTML5, CSS3, JavaScript and React.js.",
-        "Built reusable frontend components and improved UI functionality for a better user experience.",
-        "Collaborated with senior developers, QA and cross-functional stakeholders on new and existing features.",
-        "Used Git for version control and clean collaborative development workflows.",
-        "Improved application responsiveness, browser compatibility and frontend maintainability.",
+        "Promoted from the internship track to full-time Product Engineer within one month based on technical contribution and delivered work.",
+        "Built responsive, user-facing interfaces using HTML5, CSS3, JavaScript and React.js.",
+        "Created reusable frontend components from recurring UI patterns across application screens.",
+        "Worked with senior developers and QA teams to develop and improve application features.",
+        "Improved browser compatibility and responsive behaviour across applications.",
       ],
       tech: [
         "React.js",
@@ -189,29 +199,49 @@ const resume = {
       title: "Strike — All-In-One Analytics Platform",
       org: "IndiaCharts Share Trading Pvt Ltd",
       description:
-        "A market analytics platform providing real-time market data, advanced charting and analytics across stocks, indices, F&O, option chains, Greeks, heatmaps, sentiment indicators and trend scanners — with dashboards built for fast, data-driven trading decisions.",
+        "A real-time market analytics and trading platform providing market data, charting and analytics across stocks, indices, F&O, option chains, Greeks, heatmaps, sentiment indicators and trend scanners.",
       points: [
-        "Delivered streaming data visualisations — charts, option-chain graphs, heatmaps — with debounced updates that keep the UI responsive when market data floods in.",
-        "Integrated in-memory caching and API retry/backoff to cut redundant calls, handle transient failures gracefully and improve reliability on unstable networks.",
-        "Owned frontend work end to end: UI architecture, component library, performance tuning and deployment readiness.",
+        "Built real-time market data, charting and analytics experiences across dashboards used for trading decisions.",
+        "Owned frontend development end to end, including UI architecture, shared component library, streaming views, performance optimisation and release readiness.",
+        "Implemented streaming data visualisations and debounced updates to keep the UI responsive while handling high-frequency market data.",
       ],
-      tech: ["React.js", "Redux", "Highcharts", "REST APIs", "SCSS"],
+      tech: [
+        "React.js",
+        "Next.js",
+        "Redux",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Highcharts",
+        "SCSS",
+        "REST APIs",
+        "WebSocket",
+        "Git",
+      ],
       github: "",
       demo: "https://web.strike.money/",
     },
+
     {
       title: "PepCare — Healthcare Management Platform",
       org: "Real-time consultation product",
       description:
-        "A healthcare web platform connecting professionals and patients through real-time communication, built around secure sessions and role-based access.",
+        "A full-stack healthcare consultation platform connecting clinicians and patients through real-time communication, secure authentication, role-based access and consultation session management.",
       points: [
-        "Built real-time chat with React.js and WebSocket to improve communication between healthcare professionals and patients.",
-        "Developed screen recording and session management features supporting consultation workflows and monitoring.",
-        "Implemented secure multi-role authentication and role-based access control for different user types.",
-        "Created responsive, reusable UI components to keep the application scalable and maintainable.",
-        "Worked with backend and QA teams on API integration and stable feature delivery.",
+        "Built real-time chat end to end using a Node.js WebSocket server and React client for communication between clinicians and patients.",
+        "Implemented authentication and role-based access control across multiple user types, covering API protection and frontend route/component guards.",
+        "Built screen recording and consultation session management, including state handling for starting, pausing and storing sessions.",
+        "Designed API endpoints and the data model supporting consultation workflows.",
+        "Built a reusable frontend component layer for scalable interface development.",
+        "Worked with QA through integration and release to maintain feature stability.",
       ],
-      tech: ["React.js", "WebSocket", "REST APIs", "Role-based access"],
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "WebSocket",
+        "REST APIs",
+        "MongoDB",
+      ],
       github: "",
       demo: "https://www.pepcare.com/",
     },
@@ -220,24 +250,26 @@ const resume = {
   achievements: [
     {
       metric: "250KB / 1.5s",
-      text: "Cut JavaScript bundle size by 250KB and improved load time by 1.5 seconds through lazy loading and dependency audits.",
+      text: "Reduced the JavaScript bundle by roughly 250KB and improved first-load performance by about 1.5 seconds through lazy loading and dependency audits.",
     },
     {
       metric: "100+",
-      text: "Production issues resolved at IndiaCharts, improving overall system stability and user experience.",
+      text: "Resolved 100+ production issues at IndiaCharts, including long-standing issues requiring root-cause investigation.",
     },
     {
       metric: "1 month",
-      text: "Promoted from frontend development intern to full-time Product Engineer at Amphisoft Technologies, based on performance and technical contribution.",
+      text: "Promoted from the internship track to full-time Product Engineer at Amphisoft Technologies within one month based on delivered technical work.",
+    },
+    {
+      metric: "Full-stack",
+      text: "Built React frontends alongside Node.js and Express.js REST APIs and MongoDB data models at Techjays and on the PepCare healthcare platform.",
     },
     {
       metric: "Re-architecture",
-      text: "Led a frontend re-architecture and defined a scalable component and folder structure that supported growth across feature modules.",
+      text: "Re-architected the IndiaCharts frontend and established a scalable component and folder structure for continued product development.",
     },
   ],
 
-  // Nothing was listed on the resume. Add objects like
-  // { name: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: "2024" }
   certifications: [],
 };
 
@@ -247,7 +279,7 @@ const NAV_ITEMS = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "achievements", label: "Achievements" },
+  // { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact", cta: true },
 ];
 
@@ -493,6 +525,9 @@ const Hero = () => {
           <a className="btn btn--ghost" href="#contact">
             Contact me
           </a>
+          <a className="btn btn--ghost" target="_blank" href={kannanResume}>
+            Download Resume
+          </a>
         </div>
 
         <ul className="hero__links">
@@ -547,7 +582,7 @@ const About = () => (
   <Section
     id="about"
     eyebrow="01 — About"
-    title="A frontend engineer who cares how the app behaves under load"
+    title="A Full-stack Software Engineer who cares how the app behaves under load"
   >
     <div className="about">
       <Reveal className="about__text">
@@ -567,12 +602,13 @@ const About = () => (
         </ul>
       </Reveal>
 
-      {/* Profile photo: replace the placeholder below with
-          <img src="/profile.jpg" alt="Portrait of Kannan P" /> */}
+      {/* Profile photo: replace the placeholder below with */}
       <Reveal as="figure" className="about__photo">
         <div className="photo-frame">
-          <span className="photo-frame__initials">KP</span>
-          <span className="photo-frame__hint">[Add Profile Photo]</span>
+          <img src="/profile.png" alt="Portrait of Kannan P" />
+
+          {/* <span className="photo-frame__initials">KP</span>
+          <span className="photo-frame__hint">[Add Profile Photo]</span> */}
         </div>
         <figcaption className="photo-caption">
           React · TypeScript · Real-time UI
@@ -1116,7 +1152,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Achievements />
+        {/* <Achievements /> */}
         <Contact />
       </main>
 
@@ -1166,7 +1202,7 @@ body { margin: 0; background: #0B0E16; }
 
 .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 .section { padding: 96px 0; }
-.section__title { font-size: clamp(1.7rem,3.6vw,2.5rem); font-weight: 600; max-width: 20ch; margin-bottom: 44px; }
+.section__title { font-size: clamp(1.7rem,3.6vw,2.5rem); font-weight: 600; max-width: 25ch; margin-bottom: 44px; }
 .eyebrow { font-family: var(--font-mono); font-size:.78rem; letter-spacing:.16em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
 .hl { color: var(--accent-2); }
 .dot { color: var(--muted); margin: 0 4px; }
